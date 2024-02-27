@@ -1,0 +1,407 @@
+
+.photo-division {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+
+.image-container {
+    position: relative;
+    flex: 1; 
+    margin: 10px; 
+    overflow: hidden; 
+}
+
+
+.image-container img {
+    width: 90%;
+    height: 600px;
+    display: block;
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+.image-container .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.image-container:hover .overlay-text {
+    opacity: 1;
+}
+
+
+.image-container:hover img {
+    transform: scale(1.1); 
+}
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #d0c9ca;
+  font-family: 'Kalnia', serif;
+}
+
+header {
+  background-color: #93b1be;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.header-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.header-right {
+  text-align: center;
+  margin-left: 11.25rem;
+}
+
+
+#dateTimeContainer {
+  text-align: right;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+
+
+nav {
+  background-color: #e2c6c2;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 15px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+
+
+footer {
+  background-color: #93b1be;
+  color: #fff;
+  padding: 20px 0;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+}
+
+button {
+  flex: 1;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+
+.footer-container {
+
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+  margin-bottom: 20px; 
+}
+
+
+
+
+
+
+
+.content-section {
+    text-align: center;
+    margin-top: 50px; 
+    margin-bottom: 50px;
+}
+
+
+.highlighted-heading {
+  display: inline;
+  /* color: #5f9eb9; */
+  color: #5c2500;
+  font-size: 2.5rem;
+}
+
+
+
+
+
+.center-heading {
+  text-align: center;
+  rotate: -90deg;
+  margin: 0;
+}
+
+/* Style for the rectangular div */
+.rectangle {
+  width: 1100px; /* Adjust the width of the rectangle as needed */
+  background-color: #d0c9ca; /* Adjust the background color of the rectangle as needed */height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Adjust the padding as needed */
+  flex-direction: row; /* Set to row for horizontal inline */
+}
+
+/* Style for the circles */
+.circle {
+  width: 400px; /* Adjust the diameter of the circles as needed */
+  height: 350px;
+  border-radius: 40%;
+  background-color: #93b1be ; /* Adjust the background color of the circles as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px; /* Add some spacing between the circles */
+}
+
+/* Style for the text inside the circles */
+
+
+
+
+
+.inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.circle .inner p {
+  color: #5c2500; /* Adjust the text color as needed */
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  margin: 0; /* Remove default margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle .inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;
+  display: none; /* Initially hide the image */
+}
+
+.flipped .inner p {
+  display: none; /* Hide text when flipped */
+}
+
+.flipped .inner img {
+  display: block; /* Show the image when the circle is flipped */
+}
+
+
+
+.flip-card {
+  background-color: transparent;
+  margin: 5px;
+  width: 400px;
+  height: 350px;
+  object-fit: cover;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  font-family: kalnia;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 40%;
+}
+
+.flip-card-front {
+  background-color: #93b1be;
+  color: #420000;
+}
+
+.flip-card-back {
+  background-image: url(photo1.jpeg);
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back img{
+  border-radius: 40%;
+  width: 100%;
+  height: 100%;
+}
+.card {
+  --bg: #f7f7f8;
+  --hover-bg: #f2bbd3;
+  --hover-text: #5c2500;
+  width: 400px;
+  text-align: center;
+  background: var(--bg);
+  padding: 1.5em;
+  padding-block: 1.8em;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: .3s cubic-bezier(.6,.4,0,1),transform .15s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.card__body {
+  color: #464853;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.card > :not(span) {
+  transition: .3s cubic-bezier(.6,.4,0,1);
+}
+
+.card > strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -.035em;
+}
+
+.card span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: all .3s cubic-bezier(.6,.4,0,1);
+}
+
+.card:hover span {
+  top: 0;
+  font-size: 1.2em;
+}
+
+.card:hover {
+  background: var(--hover-bg);
+}
+
+.card:hover>div,.card:hover>strong {
+  opacity: 0;
+}
